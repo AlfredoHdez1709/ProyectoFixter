@@ -17,5 +17,6 @@ class Perfil(models.Model):
 	sexo=models.CharField(max_length=140,choices=GENEROS,default="Hombre")
 	bio = models.TextField(null=True,blank=True)
 	is_user=models.CharField(max_length=140,choices=TIPO,default="Alumno")
+	
 	def __str__(self):
 		return 'Este perfil pertenece a {}'.format(self.user)
