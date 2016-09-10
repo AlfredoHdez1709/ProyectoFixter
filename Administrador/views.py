@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, 
+from django.views.generic import ListView
 from .forms import RegistrationForm
 
 # Create your views here.
@@ -11,7 +11,7 @@ class Panel(ListView):
         context = {}
         return render(request, template_name, context)
 
-class Registro(View):
+class Registro(ListView):
 	def get (self,request):
 		template_name = "Administrador/Registro.html"
 		context={
