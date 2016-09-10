@@ -10,5 +10,10 @@ class Home(ListView):
         context = {}
         return render(request, template_name, context)
 
+class About(ListView):
+    def get(self, request):
+        template_name="Principal/about.html"
+        context= {}
+        return render(request, template_name, context)
 
 # Create your views here.

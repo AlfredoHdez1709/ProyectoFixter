@@ -10,20 +10,60 @@
 </head>
 <body>
     <!-- bar -->
- <nav>
+ <nav class="blue darken-3" >
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="brand-logo">Karate Kids =) </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="{%url 'list'%}">Inicio</a></li>
+        <li><a href="badges.html">iniciar session</a></li>
+        <li><a href="{%url 'About'%}">Acerca de</a></li>
       </ul>
     </div>
   </nav>
+  
+
 
     {%block content%}
 
 	{%endblock content%}
+
+
+    <footer class="page-footer blue darken-3" >
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Karate Master</h5>
+          <p class="grey-text text-lighten-4">Sitio web dedicado al karate bla bla bla yolo simon ahuebo full hd 4k</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://fixter.org">Fixter</a>
+      </div>
+    </div>
+  </footer>
 
      <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
