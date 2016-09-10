@@ -1,5 +1,8 @@
+from __future__ import unicode_literals
+
 from django.db import models
 from django.contrib.auth.models import User
+
 
 class Perfil(models.Model):
 	GENEROS=(
@@ -10,12 +13,9 @@ class Perfil(models.Model):
 		('Maestro', 'Maestro'),
 		('Alumno', 'Alumno')
 		)
-	fecha_nacimiento=models.DataFiel(null=True,blank=True)
-	Nivel=(
-		('Maestro','Maestro'),
-		('Alumno','Alumno')
-		)
-	sexo=models.CharField(max_length=140,Choices=GENEROS,default="Hombre")
-	bio = models.TexField(null=True,blank=True)
-	is_user=models.CharField(max_length=140,Choices=TIPO,default="Alumno")
-# Create your models h
+	fecha_nacimiento=models.DateField(null=True,blank=True)
+	sexo=models.CharField(max_length=140,choices=GENEROS,default="Hombre")
+	bio = models.TextField(null=True,blank=True)
+	is_user=models.CharField(max_length=140,choices=TIPO,default="Alumno")
+	def __str__(self):
+		return 'Este perfil pertenece a {}'.format(self.user)
